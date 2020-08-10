@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_4"
+    android:background="@color/colorWhite"
+
+    tools:context=".ui.TaskMenu.TaskMenuActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="42dp"
+        android:layout_height="80dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/textView13"
+        app:srcCompat="@mipmap/star" />
+
+    <TextView
+        android:id="@+id/tv_value_taskname"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:text="任务名称"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toEndOf="@+id/tv_value_creator"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/tv_value_creator"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:text="创建人"
+        android:textColor="#333333"
+        android:textSize="6sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_value_state"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/tv_value_taskname" />
+
+    <TextView
+    android:id="@+id/tv_value_time"
+    android:layout_width="0dp"
+    android:layout_height="12dp"
+    android:text="创建时间"
+    android:textColor="#444444"
+    android:textSize="8sp"
+    app:layout_constraintEnd_toEndOf="@+id/tv_value_creator"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toEndOf="@+id/textView12"
+    app:layout_constraintTop_toBottomOf="@+id/tv_value_creator" />
+
+    <TextView
+        android:id="@+id/tv_value_endtime"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:text="结束时间"
+        android:textColor="#444444"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_value_creator"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/tv_value_time" />
+
+
+    <TextView
+        android:id="@+id/tv_value_state"
+        android:layout_width="72dp"
+        android:layout_height="24dp"
+        android:text="编号"
+        android:textAlignment="center"
+        android:textColor="#111111"
+        android:textIsSelectable="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="12dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="12dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_value_taskname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_value_taskname"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageView
+        android:id="@+id/iv_see"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_value_creator"
+        app:layout_constraintTop_toBottomOf="@+id/tv_value_state"
+        app:srcCompat="@mipmap/set" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

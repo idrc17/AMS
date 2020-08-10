@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    tools:context=".ui.TaskView.TaskviewActivity">
+
+<!--    蓝色背景-->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_weight="2"
+        android:background="#2196F3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    灰色背景-->
+    <TextView
+        android:id="@+id/textViewgery"
+        android:layout_width="1dp"
+        android:layout_height="11dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--    任务名称-->
+    <TextView
+        android:id="@+id/tv_task_name"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="48dp"
+        android:background="#01FFC107"
+        android:backgroundTint="#00FFC107"
+        android:text="华谊信息研发"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_close"
+        app:layout_constraintStart_toEndOf="@+id/btn_close"
+        app:layout_constraintTop_toTopOf="@+id/btn_close" />
+
+    <!--    关闭按钮-->
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/return_logo" />
+
+<!--    报错按钮-->
+    <ImageButton
+        android:id="@+id/ibtn_error"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="100dp"
+        android:background="#00FFFFFF"
+        android:src="@mipmap/warning"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+<!--    正确按钮-->
+    <ImageButton
+        android:id="@+id/btn_correct"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="12dp"
+        android:background="#00FFFFFF"
+        android:src="@mipmap/ok_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+<!--    设备码输入框-->
+    <EditText
+        android:id="@+id/ext_code"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/editext_shape"
+        android:ems="10"
+        android:forceHasOverlappingRendering="true"
+        android:hint="@string/code"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textAlignment="center"
+        android:textColor="#111111"
+        android:textColorHint="#44444444"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_task_name"
+        android:imeOptions="actionSearch"/>
+
+<!--    报错信息输入框-->
+    <EditText
+        android:id="@+id/textinput_error"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/editext_shape"
+        android:ems="10"
+        android:forceHasOverlappingRendering="true"
+        android:hint="请输入设备的错误详情"
+        android:imeOptions="actionSearch"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textAlignment="center"
+        android:textColor="#111111"
+        android:textColorHint="#44444444"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AssetDate_Value" />
+
+
+<!--    设备报错文字-->
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="155dp"
+        android:text="设备报错"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/ibtn_error"
+        app:layout_constraintStart_toStartOf="@+id/ibtn_error"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+<!--   核实确认文字 -->
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="155dp"
+        android:text="核实确认"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_correct"
+        app:layout_constraintStart_toStartOf="@+id/btn_correct"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        tools:ignore="MissingConstraints" />
+
+<!--    提交报错信息含文字-->
+    <Button
+        android:id="@+id/btn_error"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#2196F3"
+        android:text="提交报错"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+<!--    放大镜-->
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="52dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ext_code"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ext_code"
+        app:srcCompat="@mipmap/serach" />
+
+<!--    间隔空格-->
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="#EEEEEE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+    <!--    设备编码文字-->
+    <TextView
+        android:id="@+id/AssetCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="设备编码："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <!--    设备名文字-->
+    <TextView
+        android:id="@+id/AssetName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:text="设备名称："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AssetCode" />
+
+    <!--   成本中心文字 -->
+    <TextView
+        android:id="@+id/CostCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:text="成本中心："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AssetName" />
+
+    <!--    规格型号文字-->
+    <TextView
+        android:id="@+id/AssetModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:text="规格型号："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CostCenter" />
+
+    <!--    当前状态文字-->
+    <TextView
+        android:id="@+id/Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:text="当前状态："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AssetModel" />
+
+    <!--    入账日期文字-->
+    <TextView
+        android:id="@+id/AssetDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:text="入账日期："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Status" />
+
+    <!--    设备编码信息内容-->
+    <TextView
+        android:id="@+id/AssetCode_Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/AssetCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AssetCode"
+        app:layout_constraintTop_toTopOf="@+id/AssetCode"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--    设备名称信息内容-->
+    <TextView
+        android:id="@+id/AssetName_Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/AssetName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AssetName"
+        app:layout_constraintTop_toTopOf="@+id/AssetName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--   成本中心信息内容 -->
+    <TextView
+        android:id="@+id/CostCenter_Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/CostCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/CostCenter"
+        app:layout_constraintTop_toTopOf="@+id/CostCenter"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--    规格型号信息内容-->
+    <TextView
+        android:id="@+id/AssetModel_Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/AssetModel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/CostCenter"
+        app:layout_constraintTop_toTopOf="@+id/AssetModel"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!--    当前状态信息内容-->
+    <TextView
+        android:id="@+id/Status_Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/Status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AssetCode"
+        app:layout_constraintTop_toTopOf="@+id/Status"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--    入账日期信息内容-->
+    <TextView
+        android:id="@+id/AssetDate_Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/AssetDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/CostCenter"
+        app:layout_constraintTop_toTopOf="@+id/AssetDate"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
